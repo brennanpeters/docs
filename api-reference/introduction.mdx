@@ -1,33 +1,19 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "Introduction"
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+Welcome to Blast’s API reference documentation.
 
-## Welcome
+The Blast API enables external applications to connect with Blast in a secure and reliable way. It’s designed to support a wide range of integrations, from automated workflows and internal tooling to bots and third-party services that extend Blast beyond the web interface.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+Blast’s API is REST-based, uses JSON for all requests and responses, and authenticates access through secure session cookies passed via the Cookie header. This is the same API layer that powers the Blast platform itself, ensuring consistent behavior and access to the latest features.
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+For low-level endpoint details and complete request/response specifications, refer to the full technical API reference. The documentation provided here builds on that foundation with clearer explanations and practical guidance to help you get up and running quickly.
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Our API uses cookie-based authentication. Include your `blast_SecureSession` cookie in the `Cookie` header for all requests. You can find this session token in your browser’s cookies after logging into Blast.
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+```yaml
+Cookie: <blast_SecureSession>
 ```
