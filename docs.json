@@ -45,6 +45,17 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Activity",
+        "groups": [
+          {
+            "group": "Users",
+            "pages": [
+              "get-user-activity"
+            ]
+          }
+        ]
       }
     ]
   },
